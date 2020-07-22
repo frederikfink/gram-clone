@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
-import PostImage from '../../images/y9pw7s5bbsb51.jpg';
-
 
 export class Image extends Component {
     render() {
         return (
-            <div>
+            <div style={{ height: "80%" }}>
+                <img src={require(`../../images/${this.props.imageUrl}`)} alt="post Image" style={{height: "100%", marginTop: "10px", borderRadius: "4px"}}></img>
             </div>
         )
     }
