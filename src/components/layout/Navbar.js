@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 
-import LikeIcon from '../../images/heart-2.png';
-import SearchIcon from '../../images/zoom-2.png';
+import LikeIcon from '../../icons/heart-2.png';
+import SearchIcon from '../../icons/zoom-2.png';
+import Upload from '../../icons/square-upload.png';
 import UserImage from '../../images/cv_img.png';
 
 export class Navbar extends Component {
@@ -13,14 +14,18 @@ export class Navbar extends Component {
                     <div style={{marginLeft: "auto"}}>
                         <ul>
                             <li>
-                            <a href="https://github.com/frederikfink/gram-clone"><img src={LikeIcon} alt="" style={{width: "20px"}}></img></a>
+                            <button><img src={LikeIcon} alt="" style={{width: "20px"}}></img></button>
                             </li>
                             <li>
-                            <a href="https://github.com/frederikfink/gram-clone"><img src={SearchIcon} alt="" style={{width: "20px"}}></img></a>
+                            <button><img src={SearchIcon} alt="" style={{width: "20px"}}></img></button>
                             </li>
                             <li>
-                            <a href="https://github.com/frederikfink/gram-clone"><img src={UserImage} alt="" style={{width: "20px"}}></img></a> 
+                            <button><img src={Upload} alt="" style={{width: "20px"}}></img></button> 
                             </li>
+                            <li>
+                            <button><img src={UserImage} alt="" style={{width: "20px"}}></img></button> 
+                            </li>
+
                         </ul>
                     </div>   
                 </div>

@@ -13,6 +13,22 @@ html{
   background-color: black;
 }
 
+button{
+  border: none;
+  padding: 0;
+  background-color: Transparent;
+  outline: none;
+  margin: 4px 12px;
+  padding: 6px;
+  border-bottom: 1px solid transparent;
+}
+
+button:hover{
+  cursor: pointer;
+  border-bottom: 1px solid red;
+}
+
+
 *{
   font-family: 'Inter', sans-serif; color: white;
   margin: 0;
