@@ -12,10 +12,24 @@ html { font-family: 'Inter', sans-serif; color: white;}
 html{
   background-color: black;
 }
+
 *{
   font-family: 'Inter', sans-serif; color: white;
   margin: 0;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(20, 20, 20);
+}
+
 
 ul{
   padding-left: 0;
