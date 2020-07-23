@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 //components
 import TagLine from './Tagline';
@@ -8,17 +9,24 @@ import ActionBox from './ActionBox';
 import Image from './Image';
 
 export class Post extends Component {
-  render() {
-
-    var imageToLoad = new Image();
-    function loadImage() {
-    imageToLoad.onload = function() {
-        console.log("finish loading");
-    };        
-    imageToLoad.src = "https://www.w3schools.com/w3images/mac.jpg";
+  state = {
+    posts: null
   }
-  loadImage();
+  componentDidMount(){
+      axios.get()
+      .then(res => {
+        console.log(res.data);
+        this.setState({
+          posts: res.data
+        })
+      }) 
+      .catch(err => console.log(err));
+  }
 
+  render() {
+    let recentPostMarkup = this.state.posts ? (
+      this.state.posts.map(post => <p>{post.username}</p>)
+    ) :<p>loading...</p>
     return (
       <div
         style={{
@@ -29,7 +37,7 @@ export class Post extends Component {
         }}
       >
         <TagLine
-          username={this.props.username}
+          username={recentPostMarkup}
           fullName={this.props.fullName}
         />
         <Image imageUrl={this.props.imageUrl}/>
