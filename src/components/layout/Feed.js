@@ -24,7 +24,7 @@ export class Feed extends Component {
             this.state.posts.map((post) => <Post key={post.postID} username={post.username} fullName={post.fullName} />)
         ) : <p>loading...</p>
         return (
-            <div style={{height: "93vh", width: "100%", paddingTop: "64px", whiteSpace: "nowrap", overflow: "auto"}}>
+            <div style={{height: "93vh", width: "100%", whiteSpace: "nowrap", overflow: "auto"}}>
                 {recentPostsMarkup}
             </div>
         )

@@ -4,7 +4,9 @@ export class Upload extends Component {
     render() {
         return (
             <div>
-                
+                <form onSubmit={this.handleSubmit}>
+                <button>Submit</button>
+                </form>
             </div>
         )
     }

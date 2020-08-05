@@ -18,12 +18,15 @@ class App extends Component {
           <div className="container">
             <Navbar />
             <Switch>
+            <div style={{paddingTop: "64px"}}>
               <Route exact path="/" component={home} />
               <Route exact path="/login" component={login} />
               <Route exact path="/signup" component={signup} />
               <Route exact path="/upload" component={upload} />
+              </div>
+
             </Switch>
-          </div>
+            </div>
         </Router>
       </div>
     );
