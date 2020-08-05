@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import LikeIcon from '../../icons/heart-2.png';
 import SearchIcon from '../../icons/zoom-2.png';
 import Bookmark from '../../icons/bookmark-2.png';
-import { func } from 'prop-types';
 
 export class ActionBox extends Component {
   render() {
